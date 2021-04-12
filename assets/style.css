@@ -1,0 +1,160 @@
+:root {
+    --dark: rgb(115, 112, 134);
+    --light: rgb(47, 42, 56);
+    --blue: rgb(104, 104, 212);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--dark);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background: var(--light);
+    padding: 2%;
+    color:rgb(104, 104, 212);
+}
+
+header h1 {
+    font-size: 300%;
+    font-weight: bolder;
+    border-radius: 2px;
+    padding: 5px;
+    display: inline;
+    background: rgb(231, 213, 213);
+}
+
+header nav {
+    text-align: right;
+    display: inline;
+    margin-right: 5%;
+    padding-top: 5%;
+    min-width: 50%;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 25px;
+    padding: 10px;
+    border:solid rgb(170, 167, 196);
+    border-radius: 10px;
+    background:rgb(231, 213, 213);
+    font-size: 100%;
+}
+
+header nav ul li:hover {
+    box-shadow: inset 3px 2px rosybrown;
+    background:rgb(241, 193, 193);
+    color: var(--blue)
+}
+
+header nav ul li a {
+    color:rgb(47, 42, 56);
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.image {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-image: url('./images/view.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image p {
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    font-size: 150%;
+    background:rgb(216, 199, 199);
+    padding: 10px
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    background:rgb(231, 213, 213);
+    padding: 20px;
+    width: 100%;
+}
+
+.subcontent {
+    margin: 10px;
+    padding: 10p;
+}
+
+.content h2 {
+    display: inline;
+    position: relative;
+    max-width: 150px;
+    font-size: 200%;
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+    border-right: solid rgb(47, 42, 56);
+}
+
+.content p {
+    max-width: 75%;
+    margin-left: 20px;
+    padding: 5px;
+    background:rgb(47, 42, 56);
+    color: white;
+    border-left: solid rgb(47, 42, 56);
+}
+
+.content a{
+    text-decoration: underline;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.content ul li{
+    margin-left: 20px;
+    padding: 1px 1px 5px 1px;
+    flex-wrap: wrap;
+}
+
+.content ul li a {
+    margin-left: 0px;
+    color:rgb(47, 42, 56)
+}
+
+.workcontent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workcontent div{
+    background-image: url('./images/homework1.jpg');
+    height: 175px;
+    position: relative;
+}
+
+.workcontent div:hover {
+    border: solid white;
+}
+
+
+
+.workcontent div a {
+    color: white;
+    text-decoration: none;
+    background:rgb(47, 42, 56)
+}
