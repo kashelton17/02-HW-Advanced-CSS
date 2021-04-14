@@ -19,6 +19,7 @@ header {
     background: var(--light);
     padding: 2%;
     color:rgb(104, 104, 212);
+    
 }
 
 header h1 {
@@ -31,8 +32,6 @@ header h1 {
 }
 
 header nav {
-    text-align: right;
-    display: inline;
     margin-right: 5%;
     padding-top: 5%;
     min-width: 50%;
@@ -40,12 +39,17 @@ header nav {
 
 header nav ul {
     list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: -10px;
 }
 
 header nav ul li {
-    display: inline;
-    margin-left: 25px;
-    padding: 10px;
+    flex-wrap: wrap;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
     border:solid rgb(170, 167, 196);
     border-radius: 10px;
     background:rgb(231, 213, 213);
@@ -82,13 +86,16 @@ header nav ul li a {
     padding: 10px
 }
 
-main {
+
+section {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content:flex-start;
+    justify-content: left;
 }
 
 .content {
-    display: flex;
     background:rgb(231, 213, 213);
     padding: 20px;
     width: 100%;
@@ -100,11 +107,11 @@ main {
 }
 
 .content h2 {
-    display: inline;
+    display: block;
     position: relative;
-    max-width: 150px;
+    width: 150px;
     font-size: 200%;
-    text-align: left;
+    text-align: right;
     margin: 10px;
     padding: 20px;
     border-right: solid rgb(47, 42, 56);
@@ -124,11 +131,17 @@ main {
     padding: 5px;
     margin-left: 20px;
 }
-
+.content ul {
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 2%;;
+}
 .content ul li{
+    display: flex;
     margin-left: 20px;
     padding: 1px 1px 5px 1px;
-    flex-wrap: wrap;
+    font-size: 150%;
 }
 
 .content ul li a {
@@ -136,25 +149,119 @@ main {
     color:rgb(47, 42, 56)
 }
 
-.workcontent {
+.two {
     display: flex;
     flex-wrap: wrap;
-}
-
-.workcontent div{
-    background-image: url('./images/homework1.jpg');
-    height: 175px;
-    position: relative;
+    align-self: center;
 }
 
 .workcontent div:hover {
     border: solid white;
+    opacity: 1;
 }
 
-
-
-.workcontent div a {
-    color: white;
+.workcontent div a{
+    display: inline;
+    height: 15%;
+    background:rgb(95, 126, 97);
+    color:white;
+    padding: 4%;
+    margin-left: 0px;
+    margin-bottom: 10px; 
+    border: solid grey;   
     text-decoration: none;
-    background:rgb(47, 42, 56)
+    text-align: left;
+    font-size: 100%;
+    flex-shrink: inherit;
+}
+
+.workcontent div {
+    display: flex;
+    content: '';
+    background-image: url('./images/homework1.jpg');
+    background-size: cover;
+    opacity: 75%;
+    height: 300px;
+    max-width: 400px;
+    min-width: 200px;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 950px) {
+    header nav ul {
+        display: block;
+    }
+    main {
+      display: block;
+      align-items: center;
+      width: 100%;
+    }
+
+    .content h2 {
+        display: block;
+        border-right: none;
+        border-bottom: solid black;
+        width: 100%;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .content {
+        width: 100%;
+        display: block;
+        align-items: center
+    }
+
+    .content ul {
+        display:block;
+        padding: 10px
+    }
+    .content ul li {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .workcontent {
+        display: block;
+        width: 50%;
+        float: center;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    header nav ul {
+        display: block;
+        width: 100%
+    }
+    main {
+      display: block;
+      align-items: center;
+      width: 100%;
+    }
+
+    .content h2 {
+        display: block;
+        border-right: none;
+        border-bottom: solid black;
+        width: 100%;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .content {
+        width: 100%;
+        display: block;
+        align-items: center
+    }
+
+    .content ul {
+        display:block;
+        padding: 10px
+    }
+    .content ul li {
+        display: block;
+        padding-bottom: 10px;
+    }
+
 }
