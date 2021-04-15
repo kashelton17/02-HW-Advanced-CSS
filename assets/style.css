@@ -45,7 +45,7 @@ header nav ul {
     margin-top: -10px;
 }
 
-header nav ul li {
+.nav {
     flex-wrap: wrap;
     display: inline-block;
     margin-left: 10px;
@@ -56,13 +56,13 @@ header nav ul li {
     font-size: 100%;
 }
 
-header nav ul li:hover {
+.nav:hover {
     box-shadow: inset 3px 2px rosybrown;
     background:rgb(241, 193, 193);
     color: var(--blue)
 }
 
-header nav ul li a {
+.nav a {
     color:rgb(47, 42, 56);
     text-decoration: none;
     font-family:Arial, Helvetica, sans-serif;
@@ -108,7 +108,6 @@ section {
 
 .content h2 {
     display: block;
-    position: relative;
     width: 150px;
     font-size: 200%;
     text-align: right;
@@ -137,22 +136,37 @@ section {
     justify-content: flex-end;
     margin-top: 2%;;
 }
-.content ul li{
-    display: flex;
-    margin-left: 20px;
+.contact {
+    flex-shrink: 3;
+    display: inline;
+    margin-top: 20px;
+    margin-left: 0px;
     padding: 1px 1px 5px 1px;
-    font-size: 150%;
+    font-size: 120%;
+    text-align: center;
 }
 
-.content ul li a {
-    margin-left: 0px;
+.contact a {
+    flex-shrink: 3;
+    display: inline;
+    padding-left: 0px;
     color:rgb(47, 42, 56)
+}
+
+.email::before {
+    content: '\1F4E7'
+}
+.tel::before {
+    content: '\260E'
+}
+.git::before {
+    content: '\1F4BB'
 }
 
 .two {
     display: flex;
     flex-wrap: wrap;
-    align-self: center;
+    align-content: center;
 }
 
 .workcontent div:hover {
@@ -160,8 +174,15 @@ section {
     opacity: 1;
 }
 
+.workcontent div:hover > a {
+    border-bottom: solid white;
+    border-right: solid white;
+    border-top: solid white;
+    border-left: none;
+}
+
 .workcontent div a{
-    display: inline;
+    display: flex;
     height: 15%;
     background:rgb(95, 126, 97);
     color:white;
@@ -177,13 +198,13 @@ section {
 
 .workcontent div {
     display: flex;
-    content: '';
+    flex-grow: 3; 
     background-image: url('./images/homework1.jpg');
     background-size: cover;
     opacity: 75%;
     height: 300px;
-    max-width: 400px;
-    min-width: 200px;
+    max-width: 100%;
+    min-width: 50%;
     align-items: flex-end;
 }
 
@@ -191,10 +212,14 @@ section {
     header nav ul {
         display: block;
     }
+    body {
+        margin: 0px;
+    }
     main {
       display: block;
       align-items: center;
       width: 100%;
+      margin-left: 0px;
     }
 
     .content h2 {
@@ -203,10 +228,10 @@ section {
         border-bottom: solid black;
         width: 100%;
         text-align: center;
-        margin: 20px;
+        margin-left: 0px;
     }
 
-    .content {
+    .content p {
         width: 100%;
         display: block;
         align-items: center
@@ -222,15 +247,19 @@ section {
     }
 
     .workcontent {
-        display: block;
+        display: flex;
         width: 50%;
-        float: center;
+        flex-flow: column wrap;
     }
 
 }
 
 @media screen and (max-width: 500px) {
-    header nav ul {
+    body {
+        display: block;
+        align-content: center;
+    }
+    .nav {
         display: block;
         width: 100%
     }
@@ -238,6 +267,7 @@ section {
       display: block;
       align-items: center;
       width: 100%;
+      margin-right: 20px;
     }
 
     .content h2 {
@@ -245,8 +275,9 @@ section {
         border-right: none;
         border-bottom: solid black;
         width: 100%;
+        align-content:;
         text-align: center;
-        margin: 20px;
+        margin-right: 20px;
     }
 
     .content {
