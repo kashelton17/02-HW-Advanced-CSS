@@ -1,3 +1,4 @@
+/* setting some color variables for the website */
 :root {
     --dark: rgb(115, 112, 134);
     --light: rgb(47, 42, 56);
@@ -5,16 +6,16 @@
 }
 
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
+/* creating the theme for the page, font and background color */
 body {
     background: var(--dark);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* styling the header */
 header {
     background: var(--light);
     padding: 2%;
@@ -23,10 +24,11 @@ header {
 }
 
 header h1 {
+    margin: 2%;
     font-size: 300%;
     font-weight: bolder;
     border-radius: 2px;
-    padding: 5px;
+    padding: 1%;
     display: inline;
     background: rgb(231, 213, 213);
 }
@@ -46,10 +48,11 @@ header nav ul {
 }
 
 .nav {
+    flex-grow: 1 1 1 1;
     flex-wrap: wrap;
     display: inline-block;
-    margin-left: 10px;
-    padding: 5px;
+    margin-left: 2%;
+    padding: 1%;
     border:solid rgb(170, 167, 196);
     border-radius: 10px;
     background:rgb(231, 213, 213);
@@ -68,6 +71,7 @@ header nav ul {
     font-family:Arial, Helvetica, sans-serif;
 }
 
+/* Placing an image as the background */
 .image {
     position: relative;
     height: 400px;
@@ -86,7 +90,7 @@ header nav ul {
     padding: 10px
 }
 
-
+/* styling the sections in the body */
 section {
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +103,7 @@ section {
     background:rgb(231, 213, 213);
     padding: 20px;
     width: 100%;
+    flex-grow: 1 1 1;
 }
 
 .subcontent {
@@ -106,6 +111,7 @@ section {
     padding: 10p;
 }
 
+/* Styling the headers within the content class */
 .content h2 {
     display: block;
     width: 150px;
@@ -115,58 +121,20 @@ section {
     padding: 20px;
     border-right: solid rgb(47, 42, 56);
 }
-
+ /* styling p tags in content classs */
 .content p {
     max-width: 75%;
     margin-left: 20px;
     padding: 5px;
-    background:rgb(47, 42, 56);
-    color: white;
-    border-left: solid rgb(47, 42, 56);
+    color:var(--dark);
+    font-size: 110%
 }
-
-.content a{
-    text-decoration: underline;
-    padding: 5px;
-    margin-left: 20px;
-}
-.content ul {
-    display: inline;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-top: 2%;;
-}
-.contact {
-    flex-shrink: 3;
-    display: inline;
-    margin-top: 20px;
-    margin-left: 0px;
-    padding: 1px 1px 5px 1px;
-    font-size: 120%;
-    text-align: center;
-}
-
-.contact a {
-    flex-shrink: 3;
-    display: inline;
-    padding-left: 0px;
-    color:rgb(47, 42, 56)
-}
-
-.email::before {
-    content: '\1F4E7'
-}
-.tel::before {
-    content: '\260E'
-}
-.git::before {
-    content: '\1F4BB'
-}
-
+ /* styling class two of main */
 .two {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    flex-grow: 1 1 1;
 }
 
 .workcontent div:hover {
@@ -194,20 +162,73 @@ section {
     text-align: left;
     font-size: 100%;
     flex-shrink: inherit;
+    flex-grow: 1 0 0;
 }
 
 .workcontent div {
     display: flex;
-    flex-grow: 3; 
+    flex-shrink: 1 0 0; 
     background-image: url('./images/homework1.jpg');
     background-size: cover;
     opacity: 75%;
     height: 300px;
-    max-width: 100%;
-    min-width: 50%;
+    min-width: 400px;
     align-items: flex-end;
 }
 
+/* styling the contact section of main */
+.contact ul {
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    margin-top: 2%;;
+}
+.contact {
+    align-content: center;
+    flex-grow: 1 1 1;
+    display: inline;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 1px 1px 5px 1px;
+    font-size: 120%;
+}
+
+.contact a {
+    text-decoration: underline;
+    padding: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    flex-shrink: 3;
+    display: inline;
+    padding-left: 0px;
+    color:rgb(47, 42, 56);
+    align-content: center;
+}
+
+.email::before {
+    content: '\1F4E7'
+}
+.tel::before {
+    content: '\260E'
+}
+.git::before {
+    content: '\1F4BB'
+}
+
+/* creating styling changes for smaller screens */
+@media screen and (max-width: 1175px) {
+    .workcontent div {
+        display: flex;
+        flex-shrink: 1 0 0; 
+        background-image: url('./images/homework1.jpg');
+        background-size: cover;
+        opacity: 75%;
+        height: 300px;
+        min-width: 250px;
+        align-items: flex-end;
+    }
+}
 @media screen and (max-width: 950px) {
     header nav ul {
         display: block;
@@ -253,7 +274,7 @@ section {
     }
 
 }
-
+/* creating styling changes for mobile screens */
 @media screen and (max-width: 500px) {
     body {
         display: block;
@@ -275,7 +296,7 @@ section {
         border-right: none;
         border-bottom: solid black;
         width: 100%;
-        align-content:;
+        align-content:center;
         text-align: center;
         margin-right: 20px;
     }
