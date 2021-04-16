@@ -217,7 +217,7 @@ section {
 }
 
 /* creating styling changes for smaller screens */
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 1575px) {
     .workcontent div {
         display: flex;
         flex-shrink: 1 0 0; 
@@ -227,6 +227,9 @@ section {
         height: 300px;
         min-width: 250px;
         align-items: flex-end;
+    }
+    .workone {
+        min-width: 400px;
     }
 }
 @media screen and (max-width: 950px) {
