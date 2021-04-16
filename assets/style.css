@@ -18,7 +18,7 @@ body {
 /* styling the header */
 header {
     background: var(--light);
-    background: linear-gradient(90deg,var(--light) 0%,var(--blue) 35%,var(--light) 100%);
+    background: linear-gradient(90deg,var(--light) 0%,var(--light) 35%,var(--light) 100%);
     padding: 2%;
     color:rgb(104, 104, 212);
     
@@ -26,12 +26,12 @@ header {
 
 header h1 {
     margin: 2%;
-    font-size: 300%;
+    font-size: 400%;
     font-weight: bolder;
     border-radius: 2px;
     padding: 1%;
     display: inline;
-    background: rgb(231, 213, 213);
+    border: solid rgb(231, 213, 213);
 }
 
 header nav {
@@ -53,11 +53,11 @@ header nav ul {
     flex-wrap: wrap;
     display: inline-block;
     margin-left: 2%;
-    padding: 1%;
+    padding: 0.2% 1% 0.2% 1%;
     border:solid rgb(170, 167, 196);
     border-radius: 10px;
     background:rgb(231, 213, 213);
-    font-size: 100%;
+    font-size: 200%;
 }
 
 .nav:hover {
@@ -88,7 +88,8 @@ header nav ul {
     right: 16px;
     font-size: 150%;
     background:rgb(216, 199, 199);
-    padding: 10px
+    padding: 10px;
+    font-size: 200%;
 }
 
 /* styling the sections in the body */
@@ -255,6 +256,10 @@ section {
     header nav ul {
         display: block;
     }
+
+    .nav {
+        font-size: 130%
+    }
     body {
         margin: 0px;
     }
@@ -300,7 +305,7 @@ section {
 
 }
 /* creating styling changes for mobile screens */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 519px) {
     body {
         display: block;
         align-content: center;
